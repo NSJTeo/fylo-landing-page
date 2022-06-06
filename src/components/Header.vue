@@ -1,0 +1,55 @@
+<template>
+  <header className="header__background">
+    <div className="header__container">
+      <img className="header__logo" src="" alt="" />
+      <div className="header__links">
+        <p className="header__link">Features</p>
+        <p className="header__link">Team</p>
+        <p className="header__link">Sign In</p>
+      </div>
+    </div>
+  </header>
+</template>
+
+<script>
+export default {
+  name: 'Header',
+};
+</script>
+
+<style lang="scss">
+@use '../styles/variables.scss' as *;
+
+.header {
+  &__background {
+    background: $background-secondary;
+  }
+  &__container {
+    max-width: 1440px;
+    padding: 24px 20px;
+    padding-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__logo {
+    height: 24px;
+    width: auto;
+  }
+  &__links {
+    display: flex;
+    align-items: center;
+  }
+  &__link {
+    margin-right: 24px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #ffffff;
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+</style>
