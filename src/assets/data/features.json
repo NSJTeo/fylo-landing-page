@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "header": "Access your files, anywhere",
+    "text": "The ability to use a smartphone, tablet, or computer to access your account means your files follow you everywhere.",
+    "image": "access"
+  },
+  {
+    "id": 2,
+    "header": "Security you can trust",
+    "text": "2-factor authentication and user-controlled encryption are just a couple of the security features we allow to help secure your files.",
+    "image": "security"
+  },
+  {
+    "id": 3,
+    "header": "Real-time collaboration",
+    "text": "Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.",
+    "image": "collaboration"
+  },
+  {
+    "id": 4,
+    "header": "Store any type of file",
+    "text": "Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all file types to be securely stored and shared.",
+    "image": "any"
+  }
+]

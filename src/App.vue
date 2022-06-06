@@ -11,7 +11,21 @@ export default {
 </script>
 
 <style lang="scss">
-$background-main: hsl(218, 28%, 13%);
-$background-secondary: hsl(217, 28%, 15%);
-$background-footer: hsl(216, 53%, 9%);
+@use './styles/variables.scss' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+html {
+  background-color: $background-main;
+}
 </style>
