@@ -1,7 +1,7 @@
 <template>
   <header className="header__background">
     <div className="header__container">
-      <img className="header__logo" src="" alt="" />
+      <img className="header__logo" src="../assets/misc/logo.svg" alt="" />
       <div className="header__links">
         <p className="header__link">Features</p>
         <p className="header__link">Team</p>

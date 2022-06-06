@@ -1,12 +1,15 @@
 <template>
   <Header />
+  <main><Hero /></main>
 </template>
 
 <script>
-import Header from './components/Header.vue';
+import Header from './components/Header';
+import Hero from './components/Hero';
+
 export default {
   name: 'App',
-  components: { Header },
+  components: { Header, Hero },
 };
 </script>
 
