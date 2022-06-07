@@ -46,9 +46,10 @@ export default {
 .sign-up {
   &__background {
     padding: 0 20px;
-    /* margin-bottom: 83px; */
     display: flex;
     justify-content: center;
+    position: relative;
+    top: 160px;
   }
   &__container {
     background: #1b2330;

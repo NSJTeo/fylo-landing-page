@@ -48,7 +48,6 @@ export default {
     flex-direction: column;
     align-items: center;
     padding: 0 48px;
-    /* margin-bottom: 160px; */
   }
   &__inner-container {
     position: relative;

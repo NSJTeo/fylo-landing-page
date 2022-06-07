@@ -73,6 +73,7 @@ export default {
   &__container {
     padding: 0 28px;
     padding-bottom: 52px;
+    padding-top: 259px;
   }
   &__logo {
     width: 108px;
