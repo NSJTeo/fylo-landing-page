@@ -35,7 +35,7 @@ export default {
     padding-top: 48px;
     background-image: url(../assets/backgrounds/bg-curvy-mobile.svg);
     background-color: $background-secondary;
-    background-size: 100vw;
+    background-size: 100vw 20.5rem;
     background-repeat: no-repeat;
     background-position: 0 14.5rem;
   }
