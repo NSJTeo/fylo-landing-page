@@ -4,6 +4,7 @@
     <Hero />
     <Features />
     <Info />
+    <Testimonials />
   </main>
 </template>
 
@@ -12,10 +13,11 @@ import Header from './components/Header.vue';
 import Hero from './components/Hero.vue';
 import Features from './components/Features.vue';
 import Info from './components/Info.vue';
+import Testimonials from './components/Testimonials.vue';
 
 export default {
   name: 'App',
-  components: { Header, Hero, Features, Info },
+  components: { Header, Hero, Features, Info, Testimonials },
 };
 </script>
 
