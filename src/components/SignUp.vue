@@ -42,6 +42,7 @@ export default {
 
 <style lang="scss">
 @use '../styles/variables.scss' as *;
+@use '../styles/mixins.scss' as *;
 
 .sign-up {
   &__background {
@@ -57,6 +58,9 @@ export default {
     border-radius: 9px;
     max-width: 863px;
     padding: 28px 40px 28px 37px;
+    @include desktop {
+      padding: 42px 77px 41px 77px;
+    }
   }
   &__header {
     margin-bottom: 1rem;
@@ -67,9 +71,14 @@ export default {
     line-height: 24px;
     color: #ffffff;
     text-align: center;
+    @include desktop {
+      font-size: 32px;
+      line-height: 48px;
+    }
   }
   &__text {
     margin-bottom: 2rem;
+    max-width: 673px;
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
@@ -77,15 +86,25 @@ export default {
     line-height: 21px;
     text-align: center;
     color: #ffffff;
+    @include desktop {
+      font-size: 14px;
+      line-height: 21px;
+      margin-bottom: 38px;
+    }
   }
   &__form {
     display: flex;
     flex-direction: column;
+    @include desktop {
+      flex-direction: row;
+    }
   }
   &__input {
     border: none;
     margin-bottom: 24px;
-    padding: 19px 0 15px 29px;
+    /* padding: 19px 0 15px 29px; */
+    height: 48px;
+    padding-left: 29px;
     background: #ffffff;
     box-shadow: 1px 1px 3px rgba(7, 4, 59, 0.157043);
     border-radius: 24px;
@@ -102,6 +121,17 @@ export default {
       font-size: 10px;
       line-height: 14px;
       color: #c0c0c0;
+      @include desktop {
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+    @include desktop {
+      margin-bottom: 0;
+      margin-right: 29px;
+      flex-grow: 1;
+      font-size: 12px;
+      line-height: 16px;
     }
   }
   &__button {
@@ -116,6 +146,10 @@ export default {
     line-height: 16px;
     color: #ffffff;
     border: none;
+    @include desktop {
+      width: 200px;
+      height: 48px;
+    }
   }
 }
 </style>
