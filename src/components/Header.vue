@@ -19,6 +19,7 @@ export default {
 
 <style lang="scss">
 @use '../styles/variables.scss' as *;
+@use '../styles/mixins.scss' as *;
 
 .header {
   &__background {
@@ -30,10 +31,17 @@ export default {
     padding-bottom: 0;
     display: flex;
     justify-content: space-between;
+    margin: 0 auto;
+    @include desktop {
+      padding: 73px 80px 0 80px;
+    }
   }
   &__logo {
     height: 24px;
     width: auto;
+    @include desktop {
+      height: 52px;
+    }
   }
   &__links {
     display: flex;
@@ -49,6 +57,11 @@ export default {
     color: #ffffff;
     &:last-child {
       margin: 0;
+    }
+    @include desktop {
+      font-size: 16px;
+      line-height: 19px;
+      margin-right: 58px;
     }
   }
 }
