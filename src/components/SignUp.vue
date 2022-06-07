@@ -7,8 +7,14 @@
         generous. If you have any questions, our support team would be happy to
         help you.
       </p>
-      <form className="sign-up__form">
-        <input className="sign-up__input" placeholder="exail@example.com" />
+      <form className="sign-up__form" @submit="handleSubmit">
+        <input
+          type="email"
+          className="sign-up__input"
+          placeholder="email@example.com"
+          required
+          v-model="email"
+        />
         <button className="sign-up__button" type="submit">
           Get Started For Free
         </button>
@@ -20,6 +26,17 @@
 <script>
 export default {
   name: 'SignUp',
+  data() {
+    return {
+      email: '',
+    };
+  },
+  methods: {
+    handleSubmit(e) {
+      e.preventDefault();
+      this.email = '';
+    },
+  },
 };
 </script>
 
@@ -29,7 +46,7 @@ export default {
 .sign-up {
   &__background {
     padding: 0 20px;
-    margin-bottom: 83px;
+    /* margin-bottom: 83px; */
     display: flex;
     justify-content: center;
   }

@@ -33,12 +33,11 @@ export default {
 .hero {
   &__background {
     padding-top: 48px;
-    background-image: url(../assets/backgrounds/bg-curvy-mobile.svg),
-      url(../assets/backgrounds/square.svg);
+    background-image: url(../assets/backgrounds/bg-curvy-mobile.svg);
     background-color: $background-secondary;
-    background-size: 100vw, 100vw 5%;
+    background-size: 100vw;
     background-repeat: no-repeat;
-    background-position: 0 14.5rem, 0 100%;
+    background-position: 0 14.5rem;
   }
   &__container {
     margin-bottom: 131.22px;
