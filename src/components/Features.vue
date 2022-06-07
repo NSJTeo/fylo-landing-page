@@ -38,6 +38,7 @@ export default {
 <style lang="scss">
 .features {
   &__background {
+    margin-top: 120px;
     margin-bottom: 160px;
   }
   &__container {

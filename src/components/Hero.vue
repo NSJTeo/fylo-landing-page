@@ -29,6 +29,7 @@ export default {
 
 <style lang="scss">
 @use '../styles/variables.scss' as *;
+@use '../styles/mixins.scss' as *;
 
 .hero {
   &__background {
@@ -38,6 +39,9 @@ export default {
     background-size: 100vw;
     background-repeat: no-repeat;
     background-position: 0 14.5rem;
+    @include desktop {
+      padding-top: 75px;
+    }
   }
   &__container {
     margin-bottom: 131.22px;
@@ -45,11 +49,16 @@ export default {
     flex-direction: column;
     align-items: center;
     max-width: 1440px;
+    margin: 0 auto;
   }
   &__illustration {
     height: 225px;
     margin-bottom: 33px;
     padding: 0 36px;
+    @include desktop {
+      height: 534px;
+      margin-bottom: 36px;
+    }
   }
   &__header {
     margin-bottom: 15px;
@@ -61,6 +70,12 @@ export default {
     text-align: center;
     color: #ffffff;
     padding: 0 28px;
+    @include desktop {
+      font-size: 40px;
+      line-height: 60px;
+      margin-bottom: 32px;
+      max-width: 734px;
+    }
   }
   &__text {
     margin-bottom: 32px;
@@ -72,6 +87,11 @@ export default {
     text-align: center;
     color: #ffffff;
     padding: 0 40px;
+    @include desktop {
+      line-height: 30px;
+      font-size: 20px;
+      max-width: 590px;
+    }
   }
   &__button {
     width: 240px;
@@ -86,6 +106,14 @@ export default {
     font-size: 14px;
     line-height: 16px;
     color: #ffffff;
+    @include desktop {
+      width: 280px;
+      height: 56px;
+      background: linear-gradient(138.1deg, #63e1d9 -49.34%, #34a0cd 100%);
+      border-radius: 28px;
+      font-size: 16px;
+      line-height: 19px;
+    }
   }
 }
 </style>
