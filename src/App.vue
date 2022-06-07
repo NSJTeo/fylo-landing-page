@@ -5,6 +5,7 @@
     <Features />
     <Info />
     <Testimonials />
+    <SignUp />
   </main>
 </template>
 
@@ -14,10 +15,11 @@ import Hero from './components/Hero.vue';
 import Features from './components/Features.vue';
 import Info from './components/Info.vue';
 import Testimonials from './components/Testimonials.vue';
+import SignUp from './components/SignUp.vue';
 
 export default {
   name: 'App',
-  components: { Header, Hero, Features, Info, Testimonials },
+  components: { Header, Hero, Features, Info, Testimonials, SignUp },
 };
 </script>
 
