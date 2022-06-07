@@ -47,7 +47,7 @@ export default {
     margin: 0 auto;
     @include info {
       flex-direction: row;
-      padding: 0 101px 120px 105px;
+      padding: 0 101px 179px 105px;
     }
   }
   &__image {

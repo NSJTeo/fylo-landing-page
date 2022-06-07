@@ -11,6 +11,8 @@ export default {
 </script>
 
 <style lang="scss">
+@use '../styles/mixins.scss' as *;
+
 .testimonial {
   &__container {
     margin-bottom: 24px;
@@ -23,6 +25,11 @@ export default {
     &:last-child {
       margin: 0;
     }
+    @include desktop {
+      margin: 0;
+      margin-right: 40px;
+      padding: 40px 25px 26px 26px;
+    }
   }
   &__quote {
     margin-bottom: 16px;
@@ -32,6 +39,11 @@ export default {
     font-size: 10px;
     line-height: 18px;
     color: #ffffff;
+    letter-spacing: 0.5px;
+    @include desktop {
+      font-size: 14px;
+      line-height: 21px;
+    }
   }
   &__author-container {
     display: flex;

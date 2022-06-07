@@ -42,15 +42,24 @@ export default {
 </script>
 
 <style lang="scss">
+@use '../styles/mixins.scss' as *;
+
 .testimonials {
   &__container {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0 48px;
+    max-width: 1180px;
+    margin: 0 auto;
   }
   &__inner-container {
     position: relative;
+    @include desktop {
+      display: flex;
+      padding-left: 20px;
+      justify-content: center;
+    }
   }
   &__icon {
     position: absolute;
@@ -59,6 +68,10 @@ export default {
     top: -19px;
     left: 8px;
     z-index: 1;
+    @include desktop {
+      width: 75px;
+      top: -45px;
+    }
   }
 }
 </style>
