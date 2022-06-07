@@ -5,3 +5,9 @@
     @content;
   }
 }
+
+@mixin info {
+  @media (min-width: $info-break-point) {
+    @content;
+  }
+}
