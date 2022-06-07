@@ -1,15 +1,19 @@
 <template>
   <Header />
-  <main><Hero /></main>
+  <main>
+    <Hero />
+    <Features />
+  </main>
 </template>
 
 <script>
-import Header from './components/Header';
-import Hero from './components/Hero';
+import Header from './components/Header.vue';
+import Hero from './components/Hero.vue';
+import Features from './components/Features.vue';
 
 export default {
   name: 'App',
-  components: { Header, Hero },
+  components: { Header, Hero, Features },
 };
 </script>
 
