@@ -7,6 +7,7 @@
     <Testimonials />
     <SignUp />
   </main>
+  <Footer />
 </template>
 
 <script>
@@ -16,10 +17,11 @@ import Features from './components/Features.vue';
 import Info from './components/Info.vue';
 import Testimonials from './components/Testimonials.vue';
 import SignUp from './components/SignUp.vue';
+import Footer from './components/Footer.vue';
 
 export default {
   name: 'App',
-  components: { Header, Hero, Features, Info, Testimonials, SignUp },
+  components: { Header, Hero, Features, Info, Testimonials, SignUp, Footer },
 };
 </script>
 
