@@ -7,6 +7,8 @@
 <script></script>
 
 <style lang="scss">
+@use '../styles/mixins.scss' as *;
+
 .feature {
   &__container {
     margin-bottom: 80px;
@@ -17,11 +19,19 @@
     &:last-child {
       margin-bottom: 0;
     }
+    @include desktop {
+      padding: 0;
+      margin: 0;
+    }
   }
   &__image {
     margin-bottom: 24px;
     height: 80px;
     width: auto;
+    @include desktop {
+      height: 104px;
+      margin-bottom: 1rem;
+    }
   }
   &__header {
     margin-bottom: 0.5rem;
@@ -32,6 +42,10 @@
     line-height: 24px;
     text-align: center;
     color: #ffffff;
+    @include desktop {
+      font-size: 20px;
+      line-height: 23px;
+    }
   }
   &__text {
     font-family: 'Open Sans';
@@ -41,6 +55,11 @@
     line-height: 21px;
     text-align: center;
     color: #ffffff;
+    @include desktop {
+      font-size: 14px;
+      line-height: 21px;
+      max-width: 350px;
+    }
   }
 }
 </style>

@@ -36,16 +36,28 @@ export default {
 </script>
 
 <style lang="scss">
+@use '../styles/mixins.scss' as *;
+
 .features {
   &__background {
     margin-top: 120px;
     margin-bottom: 160px;
+    @include desktop {
+      margin-top: 158px;
+      margin-bottom: 138px;
+    }
   }
   &__container {
-    max-width: 1440px;
+    max-width: 880px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include desktop {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 78px;
+      margin: 0 auto;
+    }
   }
 }
 </style>
