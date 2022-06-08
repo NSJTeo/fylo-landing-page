@@ -3,27 +3,29 @@
     <div className="footer__container">
       <img className="footer__logo" src="../assets/misc/logo.svg" alt="" />
       <div className="footer__contact-container">
-        <img
-          className="footer__contact-icon"
-          src="../assets/icons/icon-location.svg"
-          alt=""
-        />
-        <p className="footer__contact-info footer__contact-info--location">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua
-        </p>
-        <img
-          className="footer__contact-icon"
-          src="../assets/icons/icon-phone.svg"
-          alt=""
-        />
-        <p className="footer__contact-info">+1-543-123-4567</p>
-        <img
-          className="footer__contact-icon"
-          src="../assets/icons/icon-email.svg"
-          alt=""
-        />
-        <p className="footer__contact-info">example@fylo.com</p>
+        <div class="footer__contact-inner-container">
+          <div
+            class="footer__contact-icon-container footer__contact-icon-container--location"
+          >
+            <img src="../assets/icons/icon-location.svg" alt="" />
+          </div>
+          <p className="footer__contact-info footer__contact-info--location">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua
+          </p>
+        </div>
+        <div class="footer__contact-inner-container">
+          <div class="footer__contact-icon-container">
+            <img src="../assets/icons/icon-phone.svg" alt="" />
+          </div>
+          <p className="footer__contact-info">+1-543-123-4567</p>
+        </div>
+        <div class="footer__contact-inner-container">
+          <div class="footer__contact-icon-container">
+            <img src="../assets/icons/icon-email.svg" alt="" />
+          </div>
+          <p className="footer__contact-info">example@fylo.com</p>
+        </div>
       </div>
       <div className="footer__left-links">
         <p className="footer__link">About Us</p>
@@ -65,6 +67,7 @@ export default {
 
 <style lang="scss">
 @use '../styles/variables.scss' as *;
+@use '../styles/mixins.scss' as *;
 
 .footer {
   &__background {
@@ -82,12 +85,32 @@ export default {
     margin-bottom: 35px;
   }
   &__contact-container {
-    display: grid;
-    grid-template-columns: 40px 1fr;
+    /* display: grid; */
+    /* grid-template-columns: 40px 1fr; */
+    display: flex;
+    flex-direction: column;
     margin-bottom: 56px;
   }
-  &__contact-icon {
+  &__contact-icon-container {
+    min-width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
     margin-right: 1rem;
+    &--location {
+      padding-top: 6px;
+    }
+  }
+  &__contact-inner-container {
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: center;
+    &:first-child {
+      align-items: flex-start;
+    }
+    &:last-child {
+      margin: 0;
+    }
   }
   &__contact-info {
     font-family: 'Open Sans';
