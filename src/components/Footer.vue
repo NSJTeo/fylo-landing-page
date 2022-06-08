@@ -87,7 +87,7 @@ export default {
     margin: 0 auto;
   }
   &__inner-container {
-    @include desktop {
+    @include footer {
       display: flex;
     }
   }
@@ -101,13 +101,13 @@ export default {
     display: flex;
     flex-direction: column;
     margin-bottom: 56px;
-    @include desktop {
+    @include footer {
       margin-bottom: 0;
       flex-direction: row;
     }
   }
   &__phone-email-container {
-    @include desktop {
+    @include footer {
       margin-right: 146px;
     }
   }
@@ -147,7 +147,7 @@ export default {
       font-size: 16px;
       line-height: 24px;
       margin-bottom: 16px;
-      @include desktop {
+      @include footer {
         max-width: 339px;
       }
     }
@@ -160,14 +160,14 @@ export default {
   }
   &__left-links {
     margin-bottom: 48px;
-    @include desktop {
+    @include footer {
       margin-bottom: 0;
       margin-right: 80px;
     }
   }
   &__right-links {
     margin-bottom: 56px;
-    @include desktop {
+    @include footer {
       margin-bottom: 0;
     }
   }
@@ -186,7 +186,7 @@ export default {
   &__social-media-links {
     display: flex;
     justify-content: center;
-    @include desktop {
+    @include footer {
       margin-left: auto;
     }
   }

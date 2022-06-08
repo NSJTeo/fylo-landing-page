@@ -11,3 +11,9 @@
     @content;
   }
 }
+
+@mixin footer {
+  @media (min-width: $footer-break-point) {
+    @content;
+  }
+}
