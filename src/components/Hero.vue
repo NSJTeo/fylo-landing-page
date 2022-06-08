@@ -41,6 +41,8 @@ export default {
     background-position: 0 14.5rem;
     @include desktop {
       padding-top: 75px;
+      background-image: url(../assets/backgrounds/bg-curvy-desktop.svg);
+      background-position: bottom;
     }
   }
   &__container {
