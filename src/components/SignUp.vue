@@ -123,6 +123,9 @@ export default {
     font-size: 10px;
     line-height: 14px;
     color: #07043b;
+    &:focus {
+      outline: none;
+    }
     &::placeholder {
       font-family: 'Open Sans';
       font-style: normal;
