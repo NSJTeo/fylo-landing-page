@@ -14,11 +14,15 @@
           placeholder="email@example.com"
           required
           v-model="email"
+          @invalid="handleInvalid"
         />
         <button className="sign-up__button" type="submit">
           Get Started For Free
         </button>
       </form>
+      <p v-if="invalid" class="sign-up__error-message">
+        Error, please check your email
+      </p>
     </div>
   </div>
 </template>
@@ -29,12 +33,18 @@ export default {
   data() {
     return {
       email: '',
+      invalid: false,
     };
   },
   methods: {
     handleSubmit(e) {
       e.preventDefault();
       this.email = '';
+      this.invalid = false;
+    },
+    handleInvalid(e) {
+      e.preventDefault();
+      this.invalid = true;
     },
   },
 };
@@ -102,7 +112,6 @@ export default {
   &__input {
     border: none;
     margin-bottom: 24px;
-    /* padding: 19px 0 15px 29px; */
     height: 48px;
     padding-left: 29px;
     background: #ffffff;
@@ -146,10 +155,24 @@ export default {
     line-height: 16px;
     color: #ffffff;
     border: none;
+    cursor: pointer;
     @include desktop {
       width: 200px;
       height: 48px;
     }
+    &:active {
+      background: #8adae3;
+    }
+  }
+  &__error-message {
+    margin-top: 5px;
+    margin-left: 38px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 14px;
+    color: #ff4242;
   }
 }
 </style>

@@ -179,8 +179,12 @@ export default {
     font-size: 16px;
     line-height: 22px;
     color: #ffffff;
+    cursor: pointer;
     &:last-child {
       margin-bottom: 0;
+    }
+    &:hover {
+      font-weight: 700;
     }
   }
   &__social-media-links {
@@ -194,8 +198,13 @@ export default {
     margin-right: 10.82px;
     height: 31px;
     width: auto;
+    cursor: pointer;
     &:last-child {
       margin-right: 0;
+    }
+    &:hover {
+      filter: invert(80%) sepia(40%) saturate(504%) hue-rotate(121deg)
+        brightness(92%) contrast(94%);
     }
   }
 }

@@ -55,6 +55,7 @@ export default {
     font-size: 12px;
     line-height: 14px;
     color: #ffffff;
+    cursor: pointer;
     &:last-child {
       margin: 0;
     }
@@ -62,6 +63,10 @@ export default {
       font-size: 16px;
       line-height: 19px;
       margin-right: 58px;
+    }
+    &:hover {
+      text-decoration-line: underline;
+      font-weight: 700;
     }
   }
 }

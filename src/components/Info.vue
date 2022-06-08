@@ -15,12 +15,23 @@
         Securely share files and folders with friends, family and colleagues for
         live collaboration. No email attachments required.
       </p>
-      <div className="info__link">
+      <div
+        className="info__link"
+        @mouseover="toggleHover(true)"
+        @mouseleave="toggleHover(false)"
+      >
         <p className="info__link-text">See how Fylo works</p>
+        <img
+          className="info__link-image"
+          src="../assets/icons/icon-arrow-hover.svg"
+          alt=""
+          v-if="isHovering"
+        />
         <img
           className="info__link-image"
           src="../assets/icons/icon-arrow.svg"
           alt=""
+          v-else
         />
       </div>
     </div>
@@ -30,6 +41,16 @@
 <script>
 export default {
   name: 'Info',
+  data() {
+    return {
+      isHovering: false,
+    };
+  },
+  methods: {
+    toggleHover(value) {
+      return (this.isHovering = value);
+    },
+  },
 };
 </script>
 
@@ -97,8 +118,15 @@ export default {
     width: fit-content;
     display: flex;
     align-items: center;
+    cursor: pointer;
     @include info {
       margin-top: 24px;
+    }
+    &:hover {
+      border-bottom: 1px solid #fff;
+    }
+    &:hover .info__link-text {
+      color: #fff;
     }
   }
   &__link-text {
@@ -109,10 +137,18 @@ export default {
     font-size: 12px;
     line-height: 16px;
     color: #62e0d9;
+    @include info {
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
   &__link-image {
     width: 12px;
     height: 12px;
+    @include info {
+      width: 1rem;
+      height: 1rem;
+    }
   }
 }
 </style>

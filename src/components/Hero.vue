@@ -108,6 +108,7 @@ export default {
     font-size: 14px;
     line-height: 16px;
     color: #ffffff;
+    cursor: pointer;
     @include desktop {
       width: 280px;
       height: 56px;
@@ -115,6 +116,9 @@ export default {
       border-radius: 28px;
       font-size: 16px;
       line-height: 19px;
+    }
+    &:active {
+      background: #8adae3;
     }
   }
 }
