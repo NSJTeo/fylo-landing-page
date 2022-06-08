@@ -2,58 +2,64 @@
   <footer className="footer__background">
     <div className="footer__container">
       <img className="footer__logo" src="../assets/misc/logo.svg" alt="" />
-      <div className="footer__contact-container">
-        <div class="footer__contact-inner-container">
+      <div class="footer__inner-container">
+        <div className="footer__contact-container">
           <div
-            class="footer__contact-icon-container footer__contact-icon-container--location"
+            class="footer__contact-inner-container footer__contact-inner-container--location"
           >
-            <img src="../assets/icons/icon-location.svg" alt="" />
+            <div
+              class="footer__contact-icon-container footer__contact-icon-container--location"
+            >
+              <img src="../assets/icons/icon-location.svg" alt="" />
+            </div>
+            <p className="footer__contact-info footer__contact-info--location">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua
+            </p>
           </div>
-          <p className="footer__contact-info footer__contact-info--location">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua
-          </p>
-        </div>
-        <div class="footer__contact-inner-container">
-          <div class="footer__contact-icon-container">
-            <img src="../assets/icons/icon-phone.svg" alt="" />
+          <div class="footer__phone-email-container">
+            <div class="footer__contact-inner-container">
+              <div class="footer__contact-icon-container">
+                <img src="../assets/icons/icon-phone.svg" alt="" />
+              </div>
+              <p className="footer__contact-info">+1-543-123-4567</p>
+            </div>
+            <div class="footer__contact-inner-container">
+              <div class="footer__contact-icon-container">
+                <img src="../assets/icons/icon-email.svg" alt="" />
+              </div>
+              <p className="footer__contact-info">example@fylo.com</p>
+            </div>
           </div>
-          <p className="footer__contact-info">+1-543-123-4567</p>
         </div>
-        <div class="footer__contact-inner-container">
-          <div class="footer__contact-icon-container">
-            <img src="../assets/icons/icon-email.svg" alt="" />
-          </div>
-          <p className="footer__contact-info">example@fylo.com</p>
+        <div className="footer__left-links">
+          <p className="footer__link">About Us</p>
+          <p className="footer__link">Jobs</p>
+          <p className="footer__link">Press</p>
+          <p className="footer__link">Blog</p>
         </div>
-      </div>
-      <div className="footer__left-links">
-        <p className="footer__link">About Us</p>
-        <p className="footer__link">Jobs</p>
-        <p className="footer__link">Press</p>
-        <p className="footer__link">Blog</p>
-      </div>
-      <div className="footer__right-links">
-        <p className="footer__link">Contact Us</p>
-        <p className="footer__link">Terms</p>
-        <p className="footer__link">Privacy</p>
-      </div>
-      <div className="footer__social-media-links">
-        <img
-          className="footer__social-media-link"
-          src="../assets/icons/icon-facebook.svg"
-          alt=""
-        />
-        <img
-          className="footer__social-media-link"
-          src="../assets/icons/icon-twitter.svg"
-          alt=""
-        />
-        <img
-          className="footer__social-media-link"
-          src="../assets/icons/icon-instagram.svg"
-          alt=""
-        />
+        <div className="footer__right-links">
+          <p className="footer__link">Contact Us</p>
+          <p className="footer__link">Terms</p>
+          <p className="footer__link">Privacy</p>
+        </div>
+        <div className="footer__social-media-links">
+          <img
+            className="footer__social-media-link"
+            src="../assets/icons/icon-facebook.svg"
+            alt=""
+          />
+          <img
+            className="footer__social-media-link"
+            src="../assets/icons/icon-twitter.svg"
+            alt=""
+          />
+          <img
+            className="footer__social-media-link"
+            src="../assets/icons/icon-instagram.svg"
+            alt=""
+          />
+        </div>
       </div>
     </div>
   </footer>
@@ -77,6 +83,13 @@ export default {
     padding: 0 28px;
     padding-bottom: 52px;
     padding-top: 259px;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  &__inner-container {
+    @include desktop {
+      display: flex;
+    }
   }
   &__logo {
     width: 108px;
@@ -85,11 +98,18 @@ export default {
     margin-bottom: 35px;
   }
   &__contact-container {
-    /* display: grid; */
-    /* grid-template-columns: 40px 1fr; */
     display: flex;
     flex-direction: column;
     margin-bottom: 56px;
+    @include desktop {
+      margin-bottom: 0;
+      flex-direction: row;
+    }
+  }
+  &__phone-email-container {
+    @include desktop {
+      margin-right: 146px;
+    }
   }
   &__contact-icon-container {
     min-width: 28px;
@@ -98,7 +118,7 @@ export default {
     align-items: center;
     margin-right: 1rem;
     &--location {
-      padding-top: 6px;
+      padding-top: 2px;
     }
   }
   &__contact-inner-container {
@@ -110,6 +130,9 @@ export default {
     }
     &:last-child {
       margin: 0;
+    }
+    &--location {
+      margin-right: 80px;
     }
   }
   &__contact-info {
@@ -124,16 +147,29 @@ export default {
       font-size: 16px;
       line-height: 24px;
       margin-bottom: 16px;
+      @include desktop {
+        max-width: 339px;
+      }
     }
     &:last-child {
       margin-bottom: 0;
     }
   }
+  &__links {
+    display: flex;
+  }
   &__left-links {
     margin-bottom: 48px;
+    @include desktop {
+      margin-bottom: 0;
+      margin-right: 80px;
+    }
   }
   &__right-links {
     margin-bottom: 56px;
+    @include desktop {
+      margin-bottom: 0;
+    }
   }
   &__link {
     margin-bottom: 1rem;
@@ -150,9 +186,14 @@ export default {
   &__social-media-links {
     display: flex;
     justify-content: center;
+    @include desktop {
+      margin-left: auto;
+    }
   }
   &__social-media-link {
     margin-right: 10.82px;
+    height: 31px;
+    width: auto;
     &:last-child {
       margin-right: 0;
     }
