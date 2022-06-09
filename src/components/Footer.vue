@@ -202,10 +202,6 @@ export default {
     &:last-child {
       margin-right: 0;
     }
-    &:hover {
-      filter: invert(80%) sepia(40%) saturate(504%) hue-rotate(121deg)
-        brightness(92%) contrast(94%);
-    }
   }
 }
 </style>
